@@ -38,7 +38,7 @@
  
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4"><%= @article.title %></h1>
+    <h1 class="display-4" style="color:black"><%= @article.title %></h1>
     <p class="lead"><%= @article.body %></p>
     <%= link_to "Edit", edit_article_path(@article) ,class:"btn btn-primary" %>
     <%= link_to "Destroy", article_path(@article),
@@ -46,14 +46,16 @@
                   data: { confirm: "Are you sure?" },class:"btn btn-danger" %>
   </div>
   <br>
+  <hr style="border-top: 1px solid pink" class="container">
   <br>
   <div class="container">
    <p style="font-size:40px">Comments</hp>
    <%= render @article.comments %>
   </div>
 </div>
-<div class = "container" style="background-color:SlateBlue; border-radius:20px">
-  <h4 class="display-4"> Add a new comment </h4>
+<div class = "container" style="background-color:SlateGrey; border-radius:10px ;">
+  <h4 class="display-4"> Add a comment </h4>
   <%= render 'comments/form' %>
   <br>
 </div>
+
